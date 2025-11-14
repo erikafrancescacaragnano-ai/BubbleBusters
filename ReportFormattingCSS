@@ -1,0 +1,104 @@
+from IPython.display import HTML, display
+
+display(HTML(r"""
+<style>
+/* ========= Bubble Busters Notebook Theme ========= */
+:root {
+  --bb-ink:#0f1b3d; --bb-ink-2:#1f2b6c; --bb-gold:#b08d1b; --bb-gold-2:#e8dca8;
+  --bb-bg:#ffffff; --bb-bg-soft:#fbfaf3; --bb-code-bg:#f6f5ef; --bb-border:#e6dfc8;
+}
+
+/* Page background (subtle gradients) */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:-2;
+  background:
+    radial-gradient(1200px 800px at 20% 50%, rgba(31,43,108,.06), transparent 60%),
+    radial-gradient(1200px 800px at 80% 50%, rgba(176,141,27,.08), transparent 60%),
+    linear-gradient(180deg, var(--bb-bg) 0%, var(--bb-bg-soft) 100%);
+}
+
+/* Faint centered logo watermark (remove this block if you don't want it) */
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.05;
+  background: url("c702fc16-c331-4f98-92f3-95a581dfb281.png") no-repeat center 40px / min(900px, 80vw);
+}
+
+/* Markdown text (classic + JupyterLab) */
+.text_cell_render, .jp-RenderedHTMLCommon,
+.text_cell_render p, .jp-RenderedHTMLCommon p{ color:var(--bb-ink); line-height:1.65; font-size:16px; }
+
+/* Headings */
+.text_cell_render h1,.jp-RenderedHTMLCommon h1,
+.text_cell_render h2,.jp-RenderedHTMLCommon h2,
+.text_cell_render h3,.jp-RenderedHTMLCommon h3{ font-weight:700; letter-spacing:.02em; margin:.9em 0 .4em; }
+.text_cell_render h1,.jp-RenderedHTMLCommon h1{
+  font-size:2rem; line-height:1.2;
+  background:linear-gradient(90deg, var(--bb-ink) 0%, var(--bb-gold) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.text_cell_render h2,.jp-RenderedHTMLCommon h2{ font-size:1.6rem; color:var(--bb-ink-2); border-left:6px solid var(--bb-gold); padding-left:10px; }
+.text_cell_render h3,.jp-RenderedHTMLCommon h3{ font-size:1.25rem; color:var(--bb-ink); }
+
+/* Links */
+.text_cell_render a,.jp-RenderedHTMLCommon a{ color:var(--bb-gold); text-decoration:none; border-bottom:1px dashed rgba(176,141,27,.45); }
+.text_cell_render a:hover,.jp-RenderedHTMLCommon a:hover{ color:var(--bb-ink-2); border-bottom-style:solid; }
+
+/* Blockquotes */
+.text_cell_render blockquote,.jp-RenderedHTMLCommon blockquote{
+  color:var(--bb-ink);
+  background:linear-gradient(90deg, rgba(31,43,108,.06), rgba(232,220,168,.12));
+  border-left:6px solid var(--bb-gold); padding:10px 14px; margin:1em 0; border-radius:10px;
+}
+
+/* Inline code & code blocks */
+.text_cell_render code,.jp-RenderedHTMLCommon code{ background:var(--bb-code-bg); color:var(--bb-ink-2); padding:2px 6px; border-radius:6px; border:1px solid var(--bb-border); }
+div.highlight, pre, .jp-RenderedHTMLCommon pre{
+  background:var(--bb-code-bg)!important; border:1px solid var(--bb-border); border-radius:12px; padding:14px 16px;
+  box-shadow:0 0 0 3px rgba(232,220,168,.25) inset;
+}
+
+/* Tables */
+.text_cell_render table,.jp-RenderedHTMLCommon table{ border-collapse:collapse; margin:1em 0; font-size:.98rem; }
+.text_cell_render th,.jp-RenderedHTMLCommon th,.text_cell_render td,.jp-RenderedHTMLCommon td{ border:1px solid var(--bb-border); padding:8px 10px; }
+.text_cell_render th,.jp-RenderedHTMLCommon th{ background:rgba(176,141,27,.12); color:var(--bb-ink); }
+
+/* Horizontal rule */
+.text_cell_render hr,.jp-RenderedHTMLCommon hr{
+  border:none; height:2px; margin:1.5em 0; opacity:.5;
+  background:linear-gradient(90deg, var(--bb-ink) 0%, var(--bb-gold) 100%);
+}
+
+/* Images */
+.text_cell_render img,.jp-RenderedHTMLCommon img{ display:block; margin:14px auto; border-radius:12px; border:1px solid var(--bb-border); box-shadow:0 6px 24px rgba(15,27,61,.12); }
+
+/* Optional callout: <div class="bb-callout">...</div> */
+.bb-callout{ border-left:6px solid var(--bb-ink-2);
+  background:linear-gradient(90deg, rgba(31,43,108,.06), rgba(176,141,27,.08)); padding:12px 14px; border-radius:12px; margin:1em 0; }
+
+/* ========== GLOBAL FONT SIZE REDUCTION ========== */
+
+/* Shrink all markdown text globally (paragraphs, lists, etc.) */
+.text_cell_render,
+.jp-RenderedHTMLCommon {
+  font-size: 13px !important;       /* adjust size here (12–14px typical) */
+  line-height: 1.5 !important;
+}
+
+/* Ensure paragraphs and lists inherit the smaller size */
+.text_cell_render p,
+.jp-RenderedHTMLCommon p,
+.text_cell_render li,
+.jp-RenderedHTMLCommon li,
+.text_cell_render td,
+.jp-RenderedHTMLCommon td {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Optionally, make headings proportionally smaller too */
+.text_cell_render h1, .jp-RenderedHTMLCommon h1 { font-size: 1.6rem !important; }
+.text_cell_render h2, .jp-RenderedHTMLCommon h2 { font-size: 1.3rem !important; }
+.text_cell_render h3, .jp-RenderedHTMLCommon h3 { font-size: 1.1rem !important; }
+
+</style>
+"""))
