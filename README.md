@@ -1,7 +1,8 @@
 # BubbleBusters
 Bubble Busters (BB) is a Python-based financial analytics framework designed to detect, measure, and monitor speculative market exuberance across any thematic asset class. It allows for an portfolio-customized assessment to the risk of bubble-like price misallignment. The repository contains the coding portion of Bubble Busters coursework from the Data Science for Asset Management course by Professor Feng Zhou.
 
-![Bubble Busters](c9a55da5-19d0-44d2-b35b-8f7779b52c32.png)
+<img width="537" height="207" alt="c9a55da5-19d0-44d2-b35b-8f7779b52c32" src="https://github.com/user-attachments/assets/6a556360-3d34-4c51-9745-d9e9b0e43b36" />
+
 # The Bubble diagnostics revolution
 
 ---
